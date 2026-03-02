@@ -3,7 +3,7 @@ import { Target, Zap, Shield } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-24 lg:py-32 bg-muted/50 relative overflow-hidden">
+    <section id="sobre" className="py-16 lg:py-20 bg-muted/50 relative overflow-hidden">
       <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-accent/5 blur-3xl" />
 
       <div className="container relative z-10">

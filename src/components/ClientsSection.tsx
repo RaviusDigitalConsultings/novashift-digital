@@ -14,7 +14,7 @@ const clientLogos = [
 
 const ClientsSection = () => {
   return (
-    <section className="py-20 lg:py-28 bg-muted/50 overflow-hidden">
+    <section className="py-16 lg:py-20 bg-muted/50 overflow-hidden">
       <div className="container">
         <div className="text-center mb-12">
           <span className="text-xs font-semibold tracking-widest uppercase text-accent">
