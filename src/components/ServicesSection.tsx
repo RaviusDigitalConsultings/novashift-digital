@@ -37,7 +37,7 @@ const ServicesSection = () => {
   return (
     <section id="servicos" className="py-24 lg:py-32 bg-background relative">
       {/* Subtle top curve */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-primary" style={{ clipPath: "ellipse(70% 100% at 50% 0%)" }} />
+      {/*<div className="absolute top-0 left-0 right-0 h-24 bg-primary" style={{ clipPath: "ellipse(70% 100% at 50% 0%)" }} />*/}
 
       <div className="container relative z-10">
         <div className="text-center mb-16">

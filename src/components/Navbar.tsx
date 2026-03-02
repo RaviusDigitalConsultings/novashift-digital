@@ -14,10 +14,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-lg border-b border-accent/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/30 backdrop-blur-lg border-b border-accent/10">
       <div className="container flex items-center justify-between h-16">
         <a href="#" className="font-heading text-xl font-bold text-primary-foreground tracking-tight">
-          CLS <span className="text-gradient">Digital</span>
+          CLS <span className="text-gradient">Consultorias Digitais</span>
         </a>
 
         {/* Desktop */}

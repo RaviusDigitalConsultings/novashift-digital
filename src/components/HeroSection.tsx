@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import heroBg from "@/assets/hero-bg.jpg";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
@@ -8,7 +7,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover" />
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExemxqeXJ1d2tkbHoyN3E1NmNwZHg3NDg4NHM1bTkzeGJpODR1OWhhbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QjkkR8Nn0clgYcnOtC/giphy.gif" alt="" className="w-full h-full object-cover blur" />
         <div className="absolute inset-0 bg-primary/60" />
       </div>
 

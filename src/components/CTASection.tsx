@@ -24,7 +24,7 @@ const CTASection = () => {
             transformar seus resultados.
           </p>
           <Button variant="cta" size="lg" className="px-10 py-6 text-lg" asChild>
-            <a href="mailto:contato@clsdigital.com">
+            <a href="mailto:clearlinestrategy@gmail.com">
               Agendar Chamada Estratégica
               <ArrowRight className="ml-2" size={20} />
             </a>

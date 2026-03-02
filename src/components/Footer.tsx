@@ -29,8 +29,8 @@ const Footer = () => {
 
           <div>
             <h4 className="font-heading font-semibold text-primary-foreground text-sm mb-3">Contato</h4>
-            <a href="mailto:contato@clsdigital.com" className="text-primary-foreground/50 hover:text-accent transition-colors text-sm">
-              contato@clsdigital.com
+            <a href="mailto:clearlinestrategy@gmail.com" className="text-primary-foreground/50 hover:text-accent transition-colors text-sm">
+              clearlinestrategy@gmail.com
             </a>
             <div className="flex gap-3 mt-4">
               {[Linkedin, Instagram, Mail].map((Icon, i) => (

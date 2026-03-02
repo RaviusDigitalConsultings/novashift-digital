@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.blur {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=10)";
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10);
+}
+
 @layer base {
   :root {
     --background: 210 20% 98%;

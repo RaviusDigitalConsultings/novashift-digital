@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { UtensilsCrossed, Store, Rocket, Code2 } from "lucide-react";
+import { Instagram, Store, Rocket, Code2 } from "lucide-react";
 
 const industries = [
-  { icon: UtensilsCrossed, title: "Restaurantes & Pizzarias", desc: "Cardápios digitais, pedidos online e gestão inteligente de operações." },
-  { icon: Store, title: "Negócios Locais", desc: "Presença digital, agendamentos e automação de atendimento ao cliente." },
-  { icon: Rocket, title: "Startups SaaS", desc: "MVPs robustos, arquitetura escalável e lançamento acelerado no mercado." },
-  { icon: Code2, title: "Software Houses", desc: "Reforço de equipe, consultoria técnica e otimização de processos de desenvolvimento." },
+  { icon: Instagram, title: "Pequenos empreendimentos em crescimento", desc: "Presença digital, agendamentos e automação de atendimento ao cliente." },
+  { icon: Store, title: "Negócios Locais", desc: "Cardápios digitais, pedidos online e gestão inteligente de operações." },
+  { icon: Code2, title: "Sistemas completos", desc: "Reforço de equipe, consultoria técnica e otimização de processos de desenvolvimento." },
 ];
 
 const IndustriesSection = () => {
@@ -22,7 +21,7 @@ const IndustriesSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((ind, i) => (
             <motion.div
               key={ind.title}
