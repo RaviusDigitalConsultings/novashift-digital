@@ -2,14 +2,12 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const clientLogos = [
-  "Cliente A",
-  "Cliente B",
-  "Cliente C",
-  "Cliente D",
-  "Cliente E",
-  "Cliente F",
-  "Cliente G",
-  "Cliente H",
+  "Estudio Visage",
+  "Agência Nix",
+  "Estudio Visage",
+  "Agência Nix",
+  "Estudio Visage",
+  "Agência Nix",
 ];
 
 const ClientsSection = () => {
@@ -60,7 +58,7 @@ const ClientsSection = () => {
 
       <div className="text-center mt-10">
         <Button variant="heroOutline" size="lg" asChild>
-          <a href="#contato">Ver mais</a>
+          <a href="#contato" className="text-primary">Ver mais</a>
         </Button>
       </div>
     </section>
