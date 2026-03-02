@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section id="contato" className="relative py-24 lg:py-32 bg-hero overflow-hidden">
+    <section id="contato" className="relative py-16 lg:py-20 bg-hero overflow-hidden">
       {/* Glow effects */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-accent/8 blur-3xl animate-pulse-glow" />
 

@@ -9,7 +9,7 @@ const industries = [
 
 const IndustriesSection = () => {
   return (
-    <section id="industrias" className="py-24 lg:py-32 bg-background">
+    <section id="industrias" className="py-16 lg:py-20 bg-background">
       <div className="container">
         <div className="text-center mb-16">
           <span className="text-xs font-semibold tracking-widest uppercase text-accent">Indústrias</span>
