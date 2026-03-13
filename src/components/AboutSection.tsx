@@ -19,7 +19,7 @@ const AboutSection = () => {
               Nossa <span className="text-gradient">Missão</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              A CLS Digital Consultings existe para ajudar pequenos negócios a desbloquear seu verdadeiro 
+              A Ravius Digital Consultings existe para ajudar pequenos negócios a desbloquear seu verdadeiro 
               potencial de crescimento através de soluções tecnológicas escaláveis, acessíveis e orientadas 
               a resultados. Acreditamos que toda empresa merece acesso à tecnologia de ponta.
             </p>

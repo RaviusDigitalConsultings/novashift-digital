@@ -8,6 +8,7 @@ import AboutSection from "@/components/AboutSection";
 import SpecialistsSection from "@/components/SpecialistsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import FloatingCalendar from "@/components/FloatingCalendar";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <SpecialistsSection />
       <CTASection />
       <Footer />
+      <FloatingCalendar />
     </div>
   );
 };

@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid sm:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="font-heading text-lg font-bold text-primary-foreground mb-3">
-              CLS <span className="text-gradient">Digital</span>
+              Ravius <span className="text-gradient">Digital</span>
             </h3>
             <p className="text-primary-foreground/50 text-sm leading-relaxed">
               Consultoria digital e desenvolvimento de software para negócios que querem crescer.
@@ -48,7 +48,7 @@ const Footer = () => {
 
         <div className="border-t border-accent/10 pt-6 text-center">
           <p className="text-primary-foreground/30 text-xs">
-            © {new Date().getFullYear()} CLS Digital Consultings. Todos os direitos reservados.
+            © {new Date().getFullYear()} Ravius Digital Consultings. Todos os direitos reservados.
           </p>
         </div>
       </div>
