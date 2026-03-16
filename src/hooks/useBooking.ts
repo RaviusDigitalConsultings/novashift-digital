@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import type { Booking } from '@/integrations/supabase/types';
+import type { Booking } from '@/types/booking';
 
 // Simulated available slots - replace with Supabase + Google Calendar API
 const generateTimeSlots = (start: number, end: number, interval: number): string[] => {

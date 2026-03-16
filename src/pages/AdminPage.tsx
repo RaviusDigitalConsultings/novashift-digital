@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Trash2, ExternalLink, ShieldCheck, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Booking } from "@/integrations/supabase/types";
+import type { Booking } from "@/types/booking";
 
 // Mock data — replace with Supabase queries
 const MOCK_BOOKINGS: Booking[] = [

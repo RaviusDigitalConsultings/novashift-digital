@@ -7,7 +7,7 @@ import { useBooking } from "@/hooks/useBooking";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, Clock, CalendarDays, CheckCircle2, Video, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
-import type { Booking } from "@/integrations/supabase/types";
+import type { Booking } from "@/types/booking";
 
 const DURATION_OPTIONS = [
   { label: "30 min", value: 30 },
