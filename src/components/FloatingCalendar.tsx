@@ -49,18 +49,19 @@ const FloatingCalendar = () => {
         )}
       </AnimatePresence>
 
-      <motion.a
-        href="https://raviuscalendar.lovable.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-transform hover:scale-110 active:scale-95 sm:h-14 sm:w-14"
+      <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         whileHover={{ y: -5 }}
-        aria-label="Agendar chamada estratégica"
       >
-        <Calendar className="h-6 w-6 sm:h-7 sm:w-7" />
-      </motion.a>
+        <Link
+          to="/book/lucas"
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-transform hover:scale-110 active:scale-95 sm:h-14 sm:w-14"
+          aria-label="Agendar chamada estratégica"
+        >
+          <Calendar className="h-6 w-6 sm:h-7 sm:w-7" />
+        </Link>
+      </motion.div>
     </div>
   );
 };
