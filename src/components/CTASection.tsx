@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -24,10 +25,10 @@ const CTASection = () => {
             transformar seus resultados.
           </p>
           <Button variant="cta" size="lg" className="px-10 py-6 text-lg" asChild>
-            <a href="mailto:clearlinestrategy@gmail.com">
+            <Link to="/book/lucas">
               Agendar Chamada Estratégica
               <ArrowRight className="ml-2" size={20} />
-            </a>
+            </Link>
           </Button>
         </motion.div>
       </div>
