@@ -55,7 +55,7 @@ const FloatingCalendar = () => {
         whileHover={{ y: -5 }}
       >
         <Link
-          to="/book/lucas"
+          to="/book"
           className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-transform hover:scale-110 active:scale-95 sm:h-14 sm:w-14"
           aria-label="Agendar chamada estratégica"
         >
