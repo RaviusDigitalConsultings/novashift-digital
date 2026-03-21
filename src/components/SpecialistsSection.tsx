@@ -5,7 +5,7 @@ const specialists = [
   {
     name: "Lucas Tesche",
     role: "CEO & Estratégia Digital",
-    bio: "Especialista em transformação digital com experiência em consultoria para pequenos negócios.",
+    bio: "Engenheiro de Software FullStack, especialista em criação de produtos e soluções de TI.",
     photo: "https://media.licdn.com/dms/image/v2/D4D03AQFhkXp9bJ6lGA/profile-displayphoto-crop_800_800/B4DZl8.lyVIgAI-/0/1758738408078?e=1773878400&v=beta&t=c5HOxci8aWFcFts6gJkAcex23tifdBnYSoF8TLnmO5A",
     linkedin: "https://linkedin.com/in/lucastesche1",
   },
