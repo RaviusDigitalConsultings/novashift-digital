@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import type { Booking } from '@/types/booking';
+import { sendAdminBookingNotification } from '@/lib/utils';
 
 // Simulated available slots - replace with Supabase + Google Calendar API
 const generateTimeSlots = (start: number, end: number, interval: number): string[] => {
@@ -72,6 +73,9 @@ export const useBooking = () => {
     
     // Simulate API delay
     await new Promise(r => setTimeout(r, 1000));
+    
+    // Notifica o administrador sobre o novo agendamento
+    await sendAdminBookingNotification(booking);
     
     setIsLoading(false);
     return booking;
