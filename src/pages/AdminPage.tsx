@@ -268,7 +268,7 @@ const AdminPage = () => {
                           </div>
                         ) : (
                           <Button
-                            variant={booking.meet_link ? "accent" : "outline"}
+                            variant={booking.meet_link ? "default" : "outline"}
                             size="sm"
                             className="h-8 px-3 text-xs gap-1.5"
                             onClick={() => handleMeetClick(booking)}
