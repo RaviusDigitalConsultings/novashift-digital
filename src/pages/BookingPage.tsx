@@ -318,7 +318,7 @@ const BookingPage = () => {
                 </div>
 
                 <Link to="/">
-                  <Button variant="heroOutline" className="w-full">
+                  <Button variant="cta" className="w-full">
                     Voltar ao site
                   </Button>
                 </Link>

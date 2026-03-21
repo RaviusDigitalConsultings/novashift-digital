@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import type { Booking } from '@/types/booking';
 import { sendAdminBookingNotification } from '@/lib/utils';
+import { supabase } from '@/integrations/supabase/client';
 
 // Simulated available slots - replace with Supabase + Google Calendar API
 const generateTimeSlots = (start: number, end: number, interval: number): string[] => {
@@ -26,20 +27,25 @@ export const useBooking = () => {
     setIsLoading(true);
     setSelectedTime(null);
     
-    // TODO: Replace with actual Supabase query + Google Calendar API check
-    // 1. Query bookings table for this date
-    // 2. Query Google Calendar events via edge function
-    // 3. Remove overlapping slots
-    
-    // Simulating some booked slots for demo
-    const dateStr = date.toISOString().split('T')[0];
-    const mockBooked = dateStr === new Date().toISOString().split('T')[0] 
-      ? ['09:00', '09:30', '14:00'] 
-      : [];
-    
-    setBookedSlots(mockBooked);
-    setSelectedDate(date);
-    setIsLoading(false);
+    try {
+      const dateStr = date.toISOString().split('T')[0];
+      const { data, error } = await supabase
+        .from('bookings')
+        .select('time')
+        .eq('date', dateStr)
+        .eq('status', 'confirmed');
+
+      if (error) throw error;
+      
+      const booked = data?.map(b => b.time) || [];
+      setBookedSlots(booked);
+      setSelectedDate(date);
+    } catch (error: any) {
+      console.error('Erro ao buscar slots:', error.message);
+      setBookedSlots([]);
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
   const createBooking = useCallback(async (data: {
@@ -52,33 +58,37 @@ export const useBooking = () => {
     
     setIsLoading(true);
     
-    // TODO: Replace with actual Supabase insert + Edge Function call
-    // 1. Insert booking into Supabase
-    // 2. Call edge function to create Google Calendar event
-    // 3. Edge function creates Meet link and sends invite
-    // 4. Trigger webhook
-    
-    const booking: Booking = {
-      id: crypto.randomUUID(),
-      name: data.name,
-      email: data.email,
-      date: selectedDate.toISOString().split('T')[0],
-      time: selectedTime,
-      duration: data.duration,
-      message: data.message,
-      meet_link: 'https://meet.google.com/xxx-xxxx-xxx', // placeholder
-      status: 'confirmed',
-      created_at: new Date().toISOString(),
-    };
-    
-    // Simulate API delay
-    await new Promise(r => setTimeout(r, 1000));
-    
-    // Notifica o administrador sobre o novo agendamento
-    await sendAdminBookingNotification(booking);
-    
-    setIsLoading(false);
-    return booking;
+    try {
+      const bookingData = {
+        name: data.name,
+        email: data.email,
+        date: selectedDate.toISOString().split('T')[0],
+        time: selectedTime,
+        duration: data.duration,
+        message: data.message,
+        status: 'confirmed' as const,
+      };
+
+      const { data: result, error } = await supabase
+        .from('bookings')
+        .insert([bookingData])
+        .select()
+        .single();
+
+      if (error) throw error;
+
+      const booking: Booking = result;
+      
+      // Notifica o administrador sobre o novo agendamento
+      await sendAdminBookingNotification(booking);
+      
+      return booking;
+    } catch (error: any) {
+      console.error('Erro ao criar agendamento:', error.message);
+      return null;
+    } finally {
+      setIsLoading(false);
+    }
   }, [selectedDate, selectedTime]);
 
   const getFilteredSlots = () => {
