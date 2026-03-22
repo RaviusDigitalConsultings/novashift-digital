@@ -32,7 +32,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button variant="hero" size="sm" asChild>
-            <a href="#contato">Fale Conosco</a>
+            <a href="mailto:clearlinestrategy@gmail.com">Fale Conosco</a>
           </Button>
         </div>
 
@@ -67,7 +67,7 @@ const Navbar = () => {
                 </a>
               ))}
               <Button variant="hero" size="sm" className="w-full mt-2" asChild>
-                <a href="#contato">Fale Conosco</a>
+                <a href="mailto:clearlinestrategy@gmail.com">Fale Conosco</a>
               </Button>
             </div>
           </motion.div>

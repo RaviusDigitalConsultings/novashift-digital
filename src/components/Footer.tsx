@@ -36,7 +36,7 @@ const Footer = () => {
               {[Linkedin, Instagram, Mail].map((Icon, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href="https://www.instagram.com/ravius_consulting/"
                   className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center text-primary-foreground/50 hover:text-accent hover:bg-accent/20 transition-all"
                 >
                   <Icon size={16} />
