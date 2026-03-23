@@ -50,37 +50,32 @@ const SpecialistsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="group bg-card rounded-2xl border border-border hover:border-accent/30 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+              className="group relative bg-card rounded-2xl border border-border hover:border-accent/30 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 p-6"
             >
-              {/* Photo */}
-              <div className="aspect-square overflow-hidden bg-muted">
-                <img
-                  src={person.photo}
-                  alt={person.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+              <h3 className="font-heading font-semibold text-foreground text-lg">
+                {person.name}
+              </h3>
+              <span className="text-accent text-sm font-medium">{person.role}</span>
+              <p className="text-muted-foreground text-sm leading-relaxed mt-3 pr-14">
+                {person.bio}
+              </p>
 
-              {/* Info */}
-              <div className="p-6">
-                <h3 className="font-heading font-semibold text-foreground text-lg">
-                  {person.name}
-                </h3>
-                <span className="text-accent text-sm font-medium">{person.role}</span>
-                <p className="text-muted-foreground text-sm leading-relaxed mt-3">
-                  {person.bio}
-                </p>
+              <a
+                href={person.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-4 text-sm font-medium text-accent hover:text-accent/80 transition-colors"
+              >
+                <Linkedin size={18} />
+                Ver perfil no LinkedIn
+              </a>
 
-                <a
-                  href={person.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-4 text-sm font-medium text-accent hover:text-accent/80 transition-colors"
-                >
-                  <Linkedin size={18} />
-                  Ver perfil no LinkedIn
-                </a>
-              </div>
+              {/* Photo circle */}
+              <img
+                src={person.photo}
+                alt={person.name}
+                className="absolute bottom-5 right-5 w-12 h-12 rounded-full object-cover border-2 border-border shadow-sm"
+              />
             </motion.div>
           ))}
         </div>
